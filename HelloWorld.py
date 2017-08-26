@@ -6,3 +6,4 @@ cars.reverse()
 print(cars)
 
 print(cars)
+print(cars)
