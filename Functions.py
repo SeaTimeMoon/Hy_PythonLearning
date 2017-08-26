@@ -55,19 +55,26 @@ def build_person(first_name, last_name, age = ''):
 musician = build_person('jimi', 'hendrix', age=27)
 print(musician)
 
-while True:
-    print('\nPlease tell me your name:')
-    print("(enter 'q' at any time to quit)")
-
-    f_name = input("First name: ")
-    if f_name == 'q':
-        break
-
-    l_name = input("Last name: ")
-    if l_name == 'q':
-        break
-
-    formatted_name = get_formatted_name(f_name, l_name)
-    print("\nHello, " + formatted_name + "!")
-
+# while True:
+#     print('\nPlease tell me your name:')
+#     print("(enter 'q' at any time to quit)")
 #
+#     f_name = input("First name: ")
+#     if f_name == 'q':
+#         break
+#
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formatted_name + "!")
+
+# list parameters
+def greet_users(names):
+    for name in names:
+        msg = 'Hello, ' + name.title() + '!'
+        print(msg)
+
+user_names = ['hannah', 'ty', 'margot']
+greet_users(user_names)
