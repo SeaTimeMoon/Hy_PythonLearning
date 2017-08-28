@@ -55,19 +55,75 @@ def build_person(first_name, last_name, age = ''):
 musician = build_person('jimi', 'hendrix', age=27)
 print(musician)
 
-while True:
-    print('\nPlease tell me your name:')
-    print("(enter 'q' at any time to quit)")
-
-    f_name = input("First name: ")
-    if f_name == 'q':
-        break
-
-    l_name = input("Last name: ")
-    if l_name == 'q':
-        break
-
-    formatted_name = get_formatted_name(f_name, l_name)
-    print("\nHello, " + formatted_name + "!")
-
+# while True:
+#     print('\nPlease tell me your name:')
+#     print("(enter 'q' at any time to quit)")
 #
+#     f_name = input("First name: ")
+#     if f_name == 'q':
+#         break
+#
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formatted_name + "!")
+
+# list parameters
+def greet_users(names):
+    for name in names:
+        msg = 'Hello, ' + name.title() + '!'
+        print(msg)
+
+user_names = ['hannah', 'ty', 'margot']
+greet_users(user_names)
+
+def print_models(unprinted_designs, completed_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    """
+    模拟打印每个设计，直到没有未打印的设计为止
+    打印每个设计后，都将其移到列表completed_models中
+    """
+    print("\nThe following models have been printed: ")
+    for completed_model in completed_models:
+        print(completed_model)
+
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+print_models(unprinted_designs,completed_models)
+show_completed_models(completed_models)
+print(unprinted_designs)
+
+new_unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+new_completed_models = []
+print_models(new_unprinted_designs[:], new_completed_models)
+print(new_unprinted_designs)
+
+
+# 任意数量的实参
+def make_pizza(size, *toppings):
+    print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("-" + topping)
+
+make_pizza(16,'pepperoni')
+make_pizza(12,'mushrooms', 'green peppers', 'extra cheese')
+
+# 任意数量的关键字实参
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('albert', 'einstein', location='princeteon',field='physics')
+print(user_profile)
