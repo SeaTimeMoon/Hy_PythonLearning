@@ -114,3 +114,5 @@ file_names = ['A Creature of the Night.txt','Alice in wonderland','David Copperf
               ,'a tale of two cities.txt']
 for filename in file_names:
     count_words(filename)
+
+
