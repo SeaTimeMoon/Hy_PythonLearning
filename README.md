@@ -20,8 +20,15 @@ InputAndWhile.py
 - electric_car.py 
 - my_car.py
 - standardlib.py
+### 以下为其他资料上获取的
 - SweetPotato.py (其他资料上获取的)
 - Furniture.py (其他资料上获取的)
+- ProtectedProperty.py
+- DeleteMethod.py
+- InheritClass.py
+- OverrideSuper.py
+- Polymorphism.py
+- ClassPropertyAndClassMethod.py
 - CSFighting.py (CS作战示例)
 ### CS作战示例
 ### 1. 人类
@@ -52,6 +59,7 @@ InputAndWhile.py
 #### 方法
 - 连接弹夹（保存弹夹）
 - 射子弹
+
 
 ## 第10章 文件和异常
 - FilesAndException.py
